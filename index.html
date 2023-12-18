@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorteio de Skin Care</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+        }
+
+        table {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            border-collapse: collapse;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Sorteio de Skin Care</h1>
+
+    <table>
+
+        <form action="processar_formulario.php" method="post">
+            <tr>
+                <td><label for="nome">Nome:</label></td>
+                <td><input type="text" id="nome" name="nome" required></td>
+            </tr>
+
+            <tr>
+                <td><label for="data_nascimento">Data de Nascimento:</label></td>
+                <td><input type="date" id="data_nascimento" name="data_nascimento" required></td>
+            </tr>
+
+            <tr>
+                <td><label for="email">E-mail:</label></td>
+                <td><input type="email" id="email" name="email" required></td>
+            </tr>
+
+            <tr>
+                <td><label for="telefone">Telefone:</label></td>
+                <td><input type="tel" id="telefone" name="telefone"></td>
+            </tr>
+
+            <tr>
+                <td><label for="endereco">Endereço:</label></td>
+                <td><input type="text" id="endereco" name="endereco"></td>
+            </tr>
+
+            <tr>
+                <td><label for="kit">Qual kit deseja?</label></td>
+                <td>
+                    <input type="radio" id="kit1" name="kit" value="Kit 1 - Pele" required>
+                    <label for="kit1">Kit 1 - Pele</label>
+                    <input type="radio" id="kit2" name="kit" value="Kit 2 - Olhos" required>
+                    <label for="kit2">Kit 2 - Olhos</label>
+                </td>
+            </tr>
+
+            <tr>
+                <td><label for="como_soube">Como soube do sorteio?</label></td>
+                <td>
+                    <select id="como_soube" name="como_soube" required>
+                        <option value="" disabled selected>Escolha uma opção</option>
+                        <option value="redes_sociais">Redes Sociais</option>
+                        <option value="amigos">Amigos</option>
+                        <option value="outros">Outros</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2"><button type="submit">Participar do Sorteio</button></td>
+            </tr>
+
+        </form>
+
+    </table>
+
+</body>
+</html>
